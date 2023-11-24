@@ -1,6 +1,7 @@
 package net.arkaow.arkaowmod;
 
 import com.mojang.logging.LogUtils;
+import net.arkaow.arkaowmod.item.ModCreativeModTabs;
 import net.arkaow.arkaowmod.item.Moditems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,6 +26,8 @@ public class ArkaowMod {
     public ArkaowMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
 
         Moditems.register(modEventBus);
 
